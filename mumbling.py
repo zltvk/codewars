@@ -6,13 +6,16 @@ accum("cwAt") -> "C-Ww-Aaa-Tttt"
 '''
 
 def accum(st):
+    result_st = ''
     for i in st:
         st_index = int(st.index(i))
-        print(i.upper() * 1 + i.lower() * st_index, end='-')
+        part = i.lower() * (st_index+1)
+        result_st += part.capitalize() + '-'
         
+    return result_st[:-1]
         
 
 
 
-accum("RqaEzty")
+print(accum("RqaEzty"))
 
