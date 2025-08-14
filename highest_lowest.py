@@ -15,13 +15,11 @@ Output string must be two numbers separated by a single space, and highest numbe
 '''
 
 def high_and_low(numbers:str) -> str:
-    # ...
-    numbers.split()
-    sorted(numbers)
-    return numbers[0], numbers[-1]
+    numbers = sorted(numbers.split())
+    return f'{numbers[-1]} {numbers[0]}'
 
-print(high_and_low("1 2 3 4 5"))
+print(high_and_low("1 2 -3 4 5"))
 
-#assert high_and_low("1 2 3 4 5") == "5 1"
-#assert high_and_low("1 2 -3 4 5") == "5 -3"
-#assert high_and_low("1 9 3 4 -5") == "9 -5"
+assert high_and_low("1 2 3 4 5") == "5 1"
+assert high_and_low("1 2 -3 4 5") == "5 -3"
+assert high_and_low("1 9 3 4 -5") == "9 -5"
